@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Root testing renders correctly 1`] = `
+<div
+  className="fluid-container"
+>
+  <div
+    className="fluid-container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="aside col-md-2 menu"
+      >
+        <div>
+          <div
+            className="brand"
+          >
+            <h2
+              className="title"
+            >
+              React Admin
+            </h2>
+          </div>
+          <ul>
+            <li
+              className="menuItem"
+            >
+              <a
+                href="/dashboard"
+                onClick={[Function]}
+              >
+                <span
+                  aria-hidden={true}
+                  className="fa fa-tachometer menu-icon"
+                />
+                <span
+                  className="linkText"
+                >
+                  Dashboard
+                </span>
+              </a>
+            </li>
+            <li
+              className="menuItem"
+            >
+              <a
+                href="/profile"
+                onClick={[Function]}
+              >
+                <span
+                  aria-hidden={true}
+                  className="fa fa-user-o menu-icon"
+                />
+                <span
+                  className="linkText"
+                >
+                  Profile
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        className="main col-md-10"
+      >
+        <div />
+      </div>
+    </div>
+  </div>
+</div>
+`;
