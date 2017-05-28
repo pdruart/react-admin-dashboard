@@ -1,7 +1,6 @@
 import React from 'react';
 import { 
   ComposedChart, 
-  Line, 
   Area, 
   Bar, 
   XAxis, 
@@ -12,8 +11,6 @@ import {
   ResponsiveContainer,
   AreaChart
 } from 'recharts';
-
-import { Colors } from '../utils/colors';
 
 const DATA = [
   { month: 'Jan', revenue: 125123, visitors: 171282  },
