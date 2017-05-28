@@ -5,159 +5,155 @@ exports[`Root container renders correctly 1`] = `
   className="fluid-container"
 >
   <div
-    className="fluid-container"
+    className="row"
   >
     <div
-      className="row"
+      className="aside col-md-2 menu"
     >
-      <div
-        className="aside col-md-2 menu"
-      >
-        <div>
-          <div
-            className="brand"
+      <div>
+        <div
+          className="brand"
+        >
+          <h2
+            className="title"
           >
-            <h2
-              className="title"
-            >
-              React Admin
-            </h2>
-          </div>
-          <ul>
-            <li
-              className="menuItem"
-            >
-              <a
-                href="/dashboard"
-                onClick={[Function]}
-              >
-                <span
-                  aria-hidden={true}
-                  className="fa fa-tachometer menu-icon"
-                />
-                <span
-                  className="linkText"
-                >
-                  Dashboard
-                </span>
-              </a>
-            </li>
-            <li
-              className="menuItem"
-            >
-              <a
-                href="#"
-                onClick={[Function]}
-              >
-                <span
-                  aria-hidden={true}
-                  className="fa fa-shopping-cart menu-icon"
-                />
-                <span
-                  className="linkText"
-                >
-                  Shop
-                </span>
-              </a>
-            </li>
-            <li
-              className="menuItem"
-            >
-              <a
-                href="#"
-                onClick={[Function]}
-              >
-                <span
-                  aria-hidden={true}
-                  className="fa fa-tags menu-icon"
-                />
-                <span
-                  className="linkText"
-                >
-                  Products
-                </span>
-              </a>
-            </li>
-            <li
-              className="menuItem"
-            >
-              <a
-                href="#"
-                onClick={[Function]}
-              >
-                <span
-                  aria-hidden={true}
-                  className="fa fa-list menu-icon"
-                />
-                <span
-                  className="linkText"
-                >
-                  Orders
-                </span>
-              </a>
-            </li>
-            <li
-              className="menuItem"
-            >
-              <a
-                href="#"
-                onClick={[Function]}
-              >
-                <span
-                  aria-hidden={true}
-                  className="fa fa-group menu-icon"
-                />
-                <span
-                  className="linkText"
-                >
-                  Customers
-                </span>
-              </a>
-            </li>
-            <li
-              className="menuItem"
-            >
-              <a
-                href="#"
-                onClick={[Function]}
-              >
-                <span
-                  aria-hidden={true}
-                  className="fa fa-bar-chart menu-icon"
-                />
-                <span
-                  className="linkText"
-                >
-                  Analytics
-                </span>
-              </a>
-            </li>
-            <li
-              className="menuItem"
-            >
-              <a
-                href="#"
-                onClick={[Function]}
-              >
-                <span
-                  aria-hidden={true}
-                  className="fa fa-gear menu-icon"
-                />
-                <span
-                  className="linkText"
-                >
-                  Settings
-                </span>
-              </a>
-            </li>
-          </ul>
+            React Admin
+          </h2>
         </div>
+        <ul>
+          <li
+            className="menuItem"
+          >
+            <a
+              href="/dashboard"
+              onClick={[Function]}
+            >
+              <span
+                aria-hidden={true}
+                className="fa fa-tachometer menu-icon"
+              />
+              <span
+                className="linkText"
+              >
+                Dashboard
+              </span>
+            </a>
+          </li>
+          <li
+            className="menuItem"
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <span
+                aria-hidden={true}
+                className="fa fa-shopping-cart menu-icon"
+              />
+              <span
+                className="linkText"
+              >
+                Shop
+              </span>
+            </a>
+          </li>
+          <li
+            className="menuItem"
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <span
+                aria-hidden={true}
+                className="fa fa-tags menu-icon"
+              />
+              <span
+                className="linkText"
+              >
+                Products
+              </span>
+            </a>
+          </li>
+          <li
+            className="menuItem"
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <span
+                aria-hidden={true}
+                className="fa fa-list menu-icon"
+              />
+              <span
+                className="linkText"
+              >
+                Orders
+              </span>
+            </a>
+          </li>
+          <li
+            className="menuItem"
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <span
+                aria-hidden={true}
+                className="fa fa-group menu-icon"
+              />
+              <span
+                className="linkText"
+              >
+                Customers
+              </span>
+            </a>
+          </li>
+          <li
+            className="menuItem"
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <span
+                aria-hidden={true}
+                className="fa fa-bar-chart menu-icon"
+              />
+              <span
+                className="linkText"
+              >
+                Analytics
+              </span>
+            </a>
+          </li>
+          <li
+            className="menuItem"
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <span
+                aria-hidden={true}
+                className="fa fa-gear menu-icon"
+              />
+              <span
+                className="linkText"
+              >
+                Settings
+              </span>
+            </a>
+          </li>
+        </ul>
       </div>
-      <div
-        className="main col-md-10"
-      >
-        <div />
-      </div>
+    </div>
+    <div
+      className="main col-md-10"
+    >
+      <div />
     </div>
   </div>
 </div>

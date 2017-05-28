@@ -3,7 +3,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Overview from '../components/Overview';
 import GraphSection from '../components/GraphSection';
-import LatestSecion from '../components/LatestSection';
+import LatestSection from '../components/LatestSection';
 
 class Dashboard extends React.Component {
   render()  {
@@ -12,7 +12,7 @@ class Dashboard extends React.Component {
         <Header pageTitle='Dashboard'/>
           <Overview />
           <GraphSection />
-          <LatestSecion />
+          <LatestSection />
       </div>   
     );
   }

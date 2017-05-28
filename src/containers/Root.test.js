@@ -7,6 +7,7 @@ describe('Root container', () => {
     const tree = renderer.create(
       <Root />
     ).toJSON();
+    
     expect(tree).toMatchSnapshot();
   });
 });
