@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Root testing renders correctly 1`] = `
+exports[`Root container renders correctly 1`] = `
 <div
   className="fluid-container"
 >
@@ -46,17 +46,107 @@ exports[`Root testing renders correctly 1`] = `
               className="menuItem"
             >
               <a
-                href="/profile"
+                href="#"
                 onClick={[Function]}
               >
                 <span
                   aria-hidden={true}
-                  className="fa fa-user-o menu-icon"
+                  className="fa fa-shopping-cart menu-icon"
                 />
                 <span
                   className="linkText"
                 >
-                  Profile
+                  Shop
+                </span>
+              </a>
+            </li>
+            <li
+              className="menuItem"
+            >
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <span
+                  aria-hidden={true}
+                  className="fa fa-tags menu-icon"
+                />
+                <span
+                  className="linkText"
+                >
+                  Products
+                </span>
+              </a>
+            </li>
+            <li
+              className="menuItem"
+            >
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <span
+                  aria-hidden={true}
+                  className="fa fa-list menu-icon"
+                />
+                <span
+                  className="linkText"
+                >
+                  Orders
+                </span>
+              </a>
+            </li>
+            <li
+              className="menuItem"
+            >
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <span
+                  aria-hidden={true}
+                  className="fa fa-group menu-icon"
+                />
+                <span
+                  className="linkText"
+                >
+                  Customers
+                </span>
+              </a>
+            </li>
+            <li
+              className="menuItem"
+            >
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <span
+                  aria-hidden={true}
+                  className="fa fa-bar-chart menu-icon"
+                />
+                <span
+                  className="linkText"
+                >
+                  Analytics
+                </span>
+              </a>
+            </li>
+            <li
+              className="menuItem"
+            >
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <span
+                  aria-hidden={true}
+                  className="fa fa-gear menu-icon"
+                />
+                <span
+                  className="linkText"
+                >
+                  Settings
                 </span>
               </a>
             </li>

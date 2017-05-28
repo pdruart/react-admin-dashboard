@@ -8,7 +8,7 @@ export default class HCard extends React.Component {
     return(
       <div className='hCard card'>
         <div className={iconClass}>
-          <FontAwesome name={this.props.iconName} size='4x' />
+          <FontAwesome name={this.props.iconName} size='3x' />
         </div>
         <div className='dataWrapper text-light'>
           <p className='number'>{this.props.prefix}<CountTo to={this.props.number} speed={1000} />{this.props.suffix}</p>

@@ -1,5 +1,8 @@
-.hCard {
+.card {
   border: none;
+}
+
+.hCard {
   display: flex;
   flex-direction: row;
   height: 105px;
@@ -30,4 +33,8 @@
     margin-bottom: .25rem;
     margin-top: .5rem;
   }
+}
+
+.vCard {
+  padding: 1rem;
 }

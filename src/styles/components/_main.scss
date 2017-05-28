@@ -5,6 +5,12 @@
   .overview {
     padding: 0 1rem;
     width: 100%;
-    box-shadow: 0px 0px 2px 0px #eaeaea;
+    box-shadow: 0px 0px 2px 0px #d2d1d1;
+  }
+
+  .graphSection,
+  .latestSection {
+    padding: 2rem 1rem;
+    box-shadow: 0px 0px 2px 0px #d2d1d1;
   }
 }

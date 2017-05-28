@@ -7453,38 +7453,62 @@ h6 {
 h1 {
   font-size: 1.4em; }
 
-.green {
+h2 {
+  font-size: 1.2em; }
+
+.greenBG {
   background: #8BC34A; }
 
-.orange {
+.orangeBG {
   background: orange; }
 
-.amber {
+.amberBG {
   background: #FFC107; }
 
-.teal {
+.tealBG {
   background: #1DE9B6; }
 
-.purple {
+.purpleBG {
   background: purple; }
 
-.cyan {
+.cyanBG {
   background: #00BCD4; }
 
-.pink {
+.pinkBG {
   background: #F06292; }
 
 .text-light {
   color: #c6c6c6; }
+
+.green {
+  color: #8BC34A; }
+
+.orange {
+  color: orange; }
+
+.amber {
+  color: #FFC107; }
+
+.teal {
+  color: #1DE9B6; }
+
+.purple {
+  color: purple; }
+
+.cyan {
+  color: #00BCD4; }
+
+.pink {
+  color: #F06292; }
 
 .header {
   padding: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  box-shadow: 0px 0px 2px 0px #eaeaea; }
+  box-shadow: 0px 0px 2px 0px #d2d1d1; }
   .header h1 {
-    color: #1a237e; }
+    color: #F06292; }
 
 .headerNav {
   margin-right: 1rem; }
@@ -7532,7 +7556,11 @@ h1 {
   .main .overview {
     padding: 0 1rem;
     width: 100%;
-    box-shadow: 0px 0px 2px 0px #eaeaea; }
+    box-shadow: 0px 0px 2px 0px #d2d1d1; }
+  .main .graphSection,
+  .main .latestSection {
+    padding: 2rem 1rem;
+    box-shadow: 0px 0px 2px 0px #d2d1d1; }
 
 .panel {
   display: flex;
@@ -7542,8 +7570,10 @@ h1 {
     display: inline-block;
     padding: .5rem; }
 
+.card {
+  border: none; }
+
 .hCard {
-  border: none;
   display: flex;
   flex-direction: row;
   height: 105px;
@@ -7568,3 +7598,6 @@ h1 {
     line-height: 1;
     margin-bottom: .25rem;
     margin-top: .5rem; }
+
+.vCard {
+  padding: 1rem; }
