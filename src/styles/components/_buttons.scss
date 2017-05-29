@@ -1,0 +1,25 @@
+.btnCommon {
+  height: 44px;
+  display: inline-block;
+  line-height: 44px;
+  padding: 0 25px;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  border-radius: 4px;
+  font-size: 15px;
+  letter-spacing: .15em;
+  text-decoration: none;
+  transition: all .15s ease;
+  text-transform: uppercase;
+  color: #5c63ce;
+  border:none;
+  margin-top: 1rem;
+}
+
+.btnWhite {
+  background: #fff;
+}
+
+.btnPrimary {
+  color: #fff;
+  background: linear-gradient(130deg,#fc00ff, #0097de);
+}

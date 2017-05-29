@@ -6,7 +6,9 @@ import { firebaseConfig } from '../config';
 
 import Menu from './Menu';
 import Main from './Main';
-import Welcome from './Welcome';
+
+import Home from './Home';
+
 
 class App extends React.Component {
 
@@ -42,7 +44,7 @@ class App extends React.Component {
     } else {
       return (
         <div className='fluid-container'>
-          <Welcome />
+          <Home />    
         </div>    
       );
     } 

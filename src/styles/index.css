@@ -7440,7 +7440,8 @@ ul {
 
 body {
   font-size: .9em;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #5b5c5d; }
 
 h1,
 h2,
@@ -7451,10 +7452,15 @@ h6 {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 h1 {
-  font-size: 1.4em; }
+  font-size: 1.2em;
+  color: #F06292; }
 
 h2 {
   font-size: 1.2em; }
+
+.error {
+  color: red;
+  margin-top: .5rem; }
 
 .greenBG {
   background: #8BC34A; }
@@ -7500,6 +7506,9 @@ h2 {
 
 .pink {
   color: #F06292; }
+
+.white {
+  color: #fff; }
 
 .header {
   padding: 1rem;
@@ -7601,3 +7610,79 @@ h2 {
 
 .vCard {
   padding: 1rem; }
+
+.welcomeContainer .gradientBG {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  transform-origin: 0;
+  background: linear-gradient(130deg, #fc00ff, #00dbde); }
+
+.welcomeContainer .mainContainer {
+  position: relative; }
+
+.welcomeContainer a.navbar-brand,
+.welcomeContainer a.navLink {
+  color: #fff; }
+
+.welcomeContainer .navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline; }
+
+.welcomeContainer .navLink {
+  margin: 0 1rem; }
+
+.welcomeContainer .content {
+  padding: 5rem 5% 1rem 5%; }
+
+.welcomeContainer h1 {
+  font-size: 3em;
+  line-height: 1.4;
+  margin-bottom: 2rem; }
+
+.btnCommon {
+  height: 44px;
+  display: inline-block;
+  line-height: 44px;
+  padding: 0 25px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  font-size: 15px;
+  letter-spacing: .15em;
+  text-decoration: none;
+  transition: all .15s ease;
+  text-transform: uppercase;
+  color: #5c63ce;
+  border: none;
+  margin-top: 1rem; }
+
+.btnWhite {
+  background: #fff; }
+
+.btnPrimary {
+  color: #fff;
+  background: linear-gradient(130deg, #fc00ff, #0097de); }
+
+.authForm {
+  max-width: 500px;
+  margin: 1rem auto;
+  display: block; }
+  .authForm h1 {
+    text-align: center; }
+  .authForm .card {
+    padding-bottom: 2rem; }
+  .authForm .form {
+    padding: 1rem; }
+    .authForm .form input {
+      width: 100%;
+      height: 40px;
+      border-radius: 4px;
+      border: 1px solid #aeaeae;
+      padding: 10px 15px; }
+    .authForm .form button {
+      margin: 2rem auto;
+      display: block;
+      width: 100%; }
