@@ -5,7 +5,6 @@ class Profile extends React.Component {
   render()  {
     return (
       <Header pageTitle='Profile' />
-      
     );
   }
 }
