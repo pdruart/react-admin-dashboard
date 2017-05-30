@@ -1,48 +1,50 @@
 import React from 'react';
 import { 
-  Card,
   Form,
-  Button,
-  Divider 
+  Button
 } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
 
 class SignUpForm extends React.Component {
   render() {
-    const { handleSubmit, pristine, reset, submitting } = this.props;
+    const { handleSubmit, submitting } = this.props;
 
     return (
-      <div className='authForm'>
-        <Card centered className='vCard'>
-          <Form onSubmit={handleSubmit}>
-            <h1>Sign Up</h1>
-            <Divider />
-            <div className='form-group'>
-              <Field
-                label='Email'
-                placeholder='john@doe.com'
-                name='email'
-                type='email'
-                component={renderField}
-              />
-            </div>
-            <div className='form-group'>
-              <Field 
-                label='Password'
-                placeholder='*********'
-                name='password'
-                type='password'
-                component={renderField}
-              />
-            </div>
+      <div>
+        <Form onSubmit={handleSubmit}>    
+          <div className='form-group'>
+            <Field 
+              label='Name'
+              placeholder='*********'
+              name='name'
+              type='text'
+              component={renderField}
+            />
+          </div>
+          <div className='form-group'>
+            <Field
+              label='Email'
+              placeholder='john@doe.com'
+              name='email'
+              type='email'
+              component={renderField}
+            />
+          </div>
+          <div className='form-group'>
+            <Field 
+              label='Password'
+              placeholder='*********'
+              name='password'
+              type='password'
+              component={renderField}
+            />
+          </div>
 
-            <Button
-              disabled={submitting}
-              className='btnCommon btnPrimary'
-              type='submit'>Submit</Button>
-          </Form>
-        
-        </Card>
+          <Button
+            disabled={submitting}
+            className='btnCommon btnPrimary'
+            type='submit'>Submit</Button>
+        </Form>
       </div>
     );
   }
@@ -50,6 +52,12 @@ class SignUpForm extends React.Component {
 
 const validate = values => {
   const errors = {};
+
+  if (!values.name) {
+    errors.name = 'Required';
+  } else if (values.name.length < 2) {
+    errors.name = 'Minimum 2 characters';
+  }
 
   if (!values.email) {
     errors.email = 'Required';

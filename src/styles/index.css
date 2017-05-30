@@ -7611,37 +7611,28 @@ h2 {
 .vCard {
   padding: 1rem; }
 
-.welcomeContainer .gradientBG {
+.welcomeContainer {
   height: 100vh;
   width: 100%;
-  position: absolute;
   overflow: hidden;
   transform-origin: 0;
   background: linear-gradient(130deg, #fc00ff, #00dbde); }
-
-.welcomeContainer .mainContainer {
-  position: relative; }
-
-.welcomeContainer a.navbar-brand,
-.welcomeContainer a.navLink {
-  color: #fff; }
-
-.welcomeContainer .navbar ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline; }
-
-.welcomeContainer .navLink {
-  margin: 0 1rem; }
-
-.welcomeContainer .content {
-  padding: 5rem 5% 1rem 5%; }
-
-.welcomeContainer h1 {
-  font-size: 3em;
-  line-height: 1.4;
-  margin-bottom: 2rem; }
+  .welcomeContainer a.navbar-brand,
+  .welcomeContainer a.navLink {
+    color: #fff; }
+  .welcomeContainer .navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline; }
+  .welcomeContainer .navLink {
+    margin: 0 1rem; }
+  .welcomeContainer .content {
+    padding: 5rem 5% 1rem 5%; }
+  .welcomeContainer h1 {
+    font-size: 3em;
+    line-height: 1.4;
+    margin-bottom: 2rem; }
 
 .btnCommon {
   height: 44px;
@@ -7671,7 +7662,11 @@ h2 {
   margin: 1rem auto;
   display: block; }
   .authForm h1 {
-    text-align: center; }
+    text-align: center;
+    color: transparent;
+    background: linear-gradient(130deg, #fc00ff, #0097de);
+    background-clip: text;
+    -webkit-background-clip: text; }
   .authForm .card {
     padding-bottom: 2rem; }
   .authForm .form {

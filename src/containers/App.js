@@ -1,53 +1,68 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Route, withRouter, Redirect } from 'react-router-dom';
 import firebase from 'firebase';
+import { Dimmer, Loader } from 'semantic-ui-react';
 
 import { firebaseConfig } from '../config';
 
 import Menu from './Menu';
 import Main from './Main';
-
-import Home from './Home';
+import NavBar from '../components/NavBar';
+import SignIn from '../components/Auth/SignIn';
+import SignUp from '../components/Auth/SignUp';
+import Welcome from '../components/Welcome';
 
 
 class App extends React.Component {
 
-  componentWillMount() {
+  state = { loggedIn: false, loading: true }
+
+  componentDidMount() {
     firebase.initializeApp(firebaseConfig);
     firebase.auth().onAuthStateChanged((user) => {
       if (user !== null) {
-        console.log('logged in')
+        this.setState({ loggedIn: true, loading: false });
       } else {
-        // redirect to dashboard
-        console.log('not logged in')
+        this.setState({ loggedIn: false, loading: false });
       }
     });
   }
 
   render()  {
+    const loggedIn  = this.state.loggedIn;
 
-    const { loggedIn } = this.props.auth;
-
-    if (loggedIn) {
+    if (this.state.loading) {
       return (
-        <div className='fluid-container'>
-          <div className='row'>
-            <div className='aside col-md-2 menu'>
-              <Menu />
-            </div>
-            <div className='main col-md-10'>
-              <Main />
-            </div>
-          </div> 
-        </div>    
+          <Loader />   
       );
     } else {
-      return (
-        <div className='fluid-container'>
-          <Home />    
-        </div>    
-      );
-    } 
+      if (loggedIn) {
+        return (
+          <div className='fluid-container'>
+            <div className='row'>
+              <div className='aside col-md-2 menu'>
+                <Menu />
+              </div>
+              <div className='main col-md-10'>
+                <Main />
+              </div>
+            </div> 
+          </div>    
+        );
+      } else {
+        return (
+          <div className='welcomeContainer'>   
+            <div className='container mainContainer'>
+              <NavBar />
+              <Route exact path='/' component={Welcome} />
+              <Route path='/signIn' component={SignIn} />   
+              <Route path='/signUp' component={SignUp} />      
+            </div>     
+          </div> 
+        );
+      } 
+    }
   }
 }
 
@@ -55,4 +70,10 @@ const mapStateToProps = (state) => ({
   auth: state.auth
 });
 
-export default connect(mapStateToProps)(App);
+/**
+ *  withRouter is a HOC to work around the issue of connect() conflict 
+ *  with the current version of React Router.
+ *  This might change in future releases
+ */
+
+export default withRouter(connect(mapStateToProps)(App));

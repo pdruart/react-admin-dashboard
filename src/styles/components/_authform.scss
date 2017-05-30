@@ -5,6 +5,10 @@
 
   h1 {
     text-align: center;
+    color: transparent;
+    background: linear-gradient(130deg,#fc00ff, #0097de);
+    background-clip: text;
+    -webkit-background-clip: text;
   }
 
   .card {

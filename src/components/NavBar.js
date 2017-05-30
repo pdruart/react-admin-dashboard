@@ -14,7 +14,7 @@ class NavBar extends React.Component {
             <NavLink className='navLink' to='/signIn'>Sign In</NavLink>
             <NavLink className='navLink' to='/signUp'>Sign Up</NavLink>
           </li>
-        </ul>        
+        </ul>      
       </nav>  
     );
   }

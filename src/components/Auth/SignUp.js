@@ -1,30 +1,54 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Message, Loader } from 'semantic-ui-react';
+import { 
+  Card,
+  Divider 
+} from 'semantic-ui-react';
+
+import { createUser } from '../../actions';
 
 import SignUpForm from './SignUpForm';
 
 class SignUp extends React.Component {
 
-  state = { loading: false, errors: [] };
+  state = { loading: false, error: '' };
 
-  onSubmit = ({ email, password }) => {
+  onSubmit = (values) => {
     this.setState({ loading: true });
+    this.props.createUser(values);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { loggedIn } = nextProps.auth;
+    
+    if (!loggedIn) {
+      this.setState({ error: nextProps.auth.error });
+    }
+  }
+
+  renderError = () => {
+    if (this.state.error !== '') {
+      return <p className='error text-center'>{this.state.error}</p>;
+    }
   }
 
   render() {
-
     return (
-      <div>
-        <Loader active={this.state.loading} inline='centered' />
-        <SignUpForm onSubmit={this.onSubmit} />
+      <div className='authForm'>
+        <Card centered className='vCard'>
+          <h1>Sign Up</h1>
+          <Divider />
+          {this.renderError()}
+          <SignUpForm onSubmit={this.onSubmit} />
+        </Card>
       </div>
-    );
+    );  
   }
 }
 
 const mapStateToProps = state => ({
-  form: state.form
+  form: state.form,
+  auth: state.auth
 })
 
-export default connect(mapStateToProps)(SignUp);
+export default connect(mapStateToProps, { createUser } )(SignUp);

@@ -8,8 +8,7 @@ import { Provider } from 'react-redux';
 
 import store from '../store';
 
-// import App from './App';
-import Home from './Home';
+import App from './App';
 
 const history = createHistory();
 
@@ -18,7 +17,7 @@ class Root extends React.Component {
     return (
       <Provider store={store}>
         <Router history={history}>   
-          <Home />
+          <App />
         </Router>
       </Provider>
       

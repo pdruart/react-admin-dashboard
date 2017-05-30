@@ -8,8 +8,8 @@ import Profile from './Profile';
 
 const Main = () => (
   <div>
-    <Route exact path='/profile' component={Profile} pageName='Profile' />
     <Route exact path='/dashboard' component={Dashboard} pageName='Dashboard' />
+    <Route path='/profile' component={Profile} pageName='Profile' />  
   </div>
 );
 
