@@ -41,7 +41,7 @@ class App extends React.Component {
         return (
           <div className='fluid-container'>
             <div className='row'>
-              <div className='aside col-md-2 menu'>
+              <div className='aside col-md-2 sidebarMenu'>
                 <Menu />
               </div>
               <div className='main col-md-10'>

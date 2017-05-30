@@ -7511,40 +7511,41 @@ h2 {
   color: #fff; }
 
 .header {
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   box-shadow: 0px 0px 2px 0px #d2d1d1; }
   .header h1 {
-    color: #F06292; }
+    color: #F06292;
+    font-size: 2.2em; }
 
 .headerNav {
   margin-right: 1rem; }
 
-.menu {
+.sidebarMenu {
   background: #32343c;
   padding: 0;
   height: 100vh;
   overflow: auto; }
-  .menu a {
+  .sidebarMenu a {
     color: rgba(255, 255, 255, 0.85);
     display: block; }
-  .menu ul {
+  .sidebarMenu ul {
     padding-left: 0; }
-  .menu ul li {
+  .sidebarMenu ul li {
     width: 100%; }
-  .menu .brand {
+  .sidebarMenu .brand {
     text-align: center;
     padding: 1rem 0;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25); }
-    .menu .brand h2 {
+    .sidebarMenu .brand h2 {
       color: rgba(255, 255, 255, 0.85);
       font-size: 2em;
       font-weight: normal; }
 
 .menuItem {
-  font-size: .9em;
+  font-size: 1em;
   font-weight: normal;
   width: 100%; }
   .menuItem :hover {
@@ -7559,16 +7560,23 @@ h2 {
   .menuItem .linkText {
     margin-left: 1rem; }
 
+.accountMenu button {
+  margin-top: 0;
+  padding: .5rem 1rem;
+  height: initial;
+  line-height: 1;
+  font-size: .9em; }
+
 .main {
   padding: 0;
   background: #f6f6f6; }
   .main .overview {
-    padding: 0 1rem;
+    padding: 0 2rem;
     width: 100%;
     box-shadow: 0px 0px 2px 0px #d2d1d1; }
   .main .graphSection,
   .main .latestSection {
-    padding: 2rem 1rem;
+    padding: 2rem;
     box-shadow: 0px 0px 2px 0px #d2d1d1; }
 
 .panel {
@@ -7634,7 +7642,8 @@ h2 {
     line-height: 1.4;
     margin-bottom: 2rem; }
 
-.btnCommon {
+.btnCommon,
+.ui .button {
   height: 44px;
   display: inline-block;
   line-height: 44px;
@@ -7653,9 +7662,20 @@ h2 {
 .btnWhite {
   background: #fff; }
 
-.btnPrimary {
+.btnOutline {
+  border: 1px solid #0986c1;
+  background: none;
+  color: #0986c1; }
+
+.btnPrimary,
+.ui .button {
   color: #fff;
   background: linear-gradient(130deg, #fc00ff, #0097de); }
+
+.btnPrimary:hover,
+.ui .button:hover {
+  color: #fff;
+  background: linear-gradient(130deg, #b84eb9, #0986c1); }
 
 .authForm {
   max-width: 500px;
@@ -7668,9 +7688,10 @@ h2 {
     background-clip: text;
     -webkit-background-clip: text; }
   .authForm .card {
-    padding-bottom: 2rem; }
+    width: 100%;
+    padding: 2rem 0; }
   .authForm .form {
-    padding: 1rem; }
+    padding: 1rem 2rem; }
     .authForm .form input {
       width: 100%;
       height: 40px;

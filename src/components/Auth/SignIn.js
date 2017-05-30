@@ -36,7 +36,7 @@ class SignIn extends React.Component {
     return (
       <div className='authForm'>
         <Card centered className='vCard'>
-          <h1>Sign Up</h1>
+          <h1>Sign In</h1>
           <Divider />
           {this.renderError()}
           <SignInForm onSubmit={this.onSubmit} />

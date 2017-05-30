@@ -1,4 +1,5 @@
-.btnCommon {
+.btnCommon,
+.ui .button {
   height: 44px;
   display: inline-block;
   line-height: 44px;
@@ -19,7 +20,20 @@
   background: #fff;
 }
 
-.btnPrimary {
+.btnOutline {
+  border: 1px solid #0986c1;
+  background: none;
+  color: #0986c1;
+}
+
+.btnPrimary,
+.ui .button {
   color: #fff;
   background: linear-gradient(130deg,#fc00ff, #0097de);
+}
+
+.btnPrimary:hover,
+.ui .button:hover {
+  color: #fff;
+  background: linear-gradient(130deg, #b84eb9, #0986c1);
 }

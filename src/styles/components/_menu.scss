@@ -1,4 +1,4 @@
-.menu {
+.sidebarMenu {
   background: #32343c;
   padding: 0;
   height: 100vh;
@@ -31,7 +31,7 @@
 }
 
 .menuItem {
-  font-size: .9em;
+  font-size: 1em;
   font-weight: normal;
   width: 100%;
 
@@ -55,5 +55,15 @@
 
   .linkText {
     margin-left: 1rem;
+  }
+}
+
+.accountMenu {
+  button {
+    margin-top: 0;
+    padding: .5rem 1rem;
+    height: initial;
+    line-height: 1;
+    font-size: .9em;
   }
 }

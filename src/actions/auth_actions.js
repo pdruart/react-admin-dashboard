@@ -37,10 +37,23 @@ export const createUser = (values) => async (dispatch) => {
   }
 };
 
-export const signIn = (email, password) => async (dispatch) => {
-  console.log(email)
+export const signIn = (values) => async (dispatch) => {
+  const { email, password } = values;
+
+  try {
+    let user = await firebase.auth().signInWithEmailAndPassword(email, password);
+
+    dispatch({ type: LOGIN_SUCCESS, payload: user });
+    
+  } catch (err) {
+    console.log(err);
+
+    dispatch({ type: LOGIN_FAIL, payload: err});
+
+  }
 };
 
 export const signOut = () => dispatch => {
+  firebase.auth().signOut();
   dispatch({ type: LOGOUT });
 }
