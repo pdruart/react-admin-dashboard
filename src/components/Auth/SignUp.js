@@ -7,6 +7,7 @@ import {
 
 import { createUser } from '../../actions';
 
+import NavBar from '../NavBar';
 import SignUpForm from './SignUpForm';
 
 class SignUp extends React.Component {
@@ -34,14 +35,19 @@ class SignUp extends React.Component {
 
   render() {
     return (
-      <div className='authForm'>
-        <Card centered className='vCard'>
-          <h1>Sign Up</h1>
-          <Divider />
-          {this.renderError()}
-          <SignUpForm onSubmit={this.onSubmit} />
-        </Card>
-      </div>
+       <div className='welcomeContainer'>   
+        <div className='container mainContainer'>
+          <NavBar />
+            <div className='authForm'>
+            <Card centered className='vCard'>
+              <h1>Sign Up</h1>
+              <Divider />
+              {this.renderError()}
+              <SignUpForm onSubmit={this.onSubmit} />
+            </Card>
+          </div>
+        </div>     
+      </div>    
     );  
   }
 }

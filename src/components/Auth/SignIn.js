@@ -7,6 +7,7 @@ import {
 
 import { signIn } from '../../actions';
 
+import NavBar from '../NavBar';
 import SignInForm from './SignInForm';
 
 class SignIn extends React.Component {
@@ -34,14 +35,20 @@ class SignIn extends React.Component {
 
   render() {
     return (
-      <div className='authForm'>
-        <Card centered className='vCard'>
-          <h1>Sign In</h1>
-          <Divider />
-          {this.renderError()}
-          <SignInForm onSubmit={this.onSubmit} />
-        </Card>
-      </div>
+       <div className='welcomeContainer'>   
+        <div className='container mainContainer'>
+          <NavBar />
+          <div className='authForm'>
+            <Card centered className='vCard'>
+              <h1>Sign In</h1>
+              <Divider />
+              {this.renderError()}
+              <SignInForm onSubmit={this.onSubmit} />
+            </Card>
+          </div>
+        </div>     
+      </div> 
+     
     );  
   }
 }

@@ -1,17 +1,38 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Route, withRouter } from 'react-router-dom';
+import { Route, withRouter, Redirect } from 'react-router-dom';
 import firebase from 'firebase';
 import { Loader } from 'semantic-ui-react';
 
 import { firebaseConfig } from '../config';
 
-import Menu from './Menu';
-import Main from './Main';
-import NavBar from '../components/NavBar';
+import Home from './Home';
+import Dashboard from './Dashboard';
 import SignIn from '../components/Auth/SignIn';
 import SignUp from '../components/Auth/SignUp';
-import Welcome from '../components/Welcome';
+
+
+const ProtectedRoute = ({ component: Component, authed, ...rest }) => {
+  return (
+    <Route
+      {...rest}
+      render={props => authed === true 
+      ? <Component {...props} />
+      : <Redirect to={{ pathname: '/', state: { from: props.location }}} />}
+    />
+  );
+}
+
+const PublicRoute = ({ component: Component, authed, ...rest }) => {
+  return (
+    <Route
+      {...rest}
+      render={props => authed === false 
+      ? <Component {...props} />
+      : <Redirect to='/dashboard' />}
+    />
+  );
+}
 
 
 class App extends React.Component {
@@ -30,38 +51,17 @@ class App extends React.Component {
   }
 
   render()  {
-    const loggedIn  = this.state.loggedIn;
-
     if (this.state.loading) {
-      return (
-          <Loader />   
-      );
+      return <Loader />;
     } else {
-      if (loggedIn) {
-        return (
-          <div className='fluid-container'>
-            <div className='row'>
-              <div className='aside col-md-2 sidebarMenu'>
-                <Menu />
-              </div>
-              <div className='main col-md-10'>
-                <Main />
-              </div>
-            </div> 
-          </div>    
-        );
-      } else {
-        return (
-          <div className='welcomeContainer'>   
-            <div className='container mainContainer'>
-              <NavBar />
-              <Route exact path='/' component={Welcome} />
-              <Route path='/signIn' component={SignIn} />   
-              <Route path='/signUp' component={SignUp} />      
-            </div>     
-          </div> 
-        );
-      } 
+      return (
+        <div>
+          <Route exact path='/' component={Home} />
+          <PublicRoute authed={this.state.loggedIn} path='/signIn' component={SignIn} />
+          <PublicRoute authed={this.state.loggedIn} path='/signUp' component={SignUp} />
+          <ProtectedRoute authed={this.state.loggedIn} path='/dashboard' component={Dashboard} />     
+        </div>
+      )
     }
   }
 }

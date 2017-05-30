@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card } from 'semantic-ui-react';
 
 export default class LatestSection extends React.Component {
 
@@ -8,16 +7,10 @@ export default class LatestSection extends React.Component {
       <section className='latestSection'>
         <div className='row'>
           <div className='col-md-6 col-sm-12'>
-            <h2>Latest Orders</h2>
-            <Card>
-              <p>This is a Card</p>
-            </Card>
+            <h2>Latest Orders</h2>       
           </div>
           <div className='col-md-6 col-sm-12'>
-            <h2>Latest Visitors</h2>  
-             <Card>
-               <p>This is a Card</p>
-            </Card>
+            <h2>Latest Visitors</h2>            
           </div>
         </div>
       </section>

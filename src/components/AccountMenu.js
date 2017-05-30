@@ -1,5 +1,4 @@
 import React from 'react';
-import FontAwesome from 'react-fontawesome';
 import { connect } from 'react-redux';
 
 import { signOut } from '../actions';
