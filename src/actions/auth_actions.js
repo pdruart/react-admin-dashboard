@@ -14,7 +14,7 @@ export const createUser = (values) => async (dispatch) => {
   try {
     let authUser = await firebase.auth().createUserWithEmailAndPassword(email, password);
 
-    let user = await firebase.database().ref(`users/${authUser.uid}`).set({
+    await firebase.database().ref(`users/${authUser.uid}`).set({
       email,
       name
     });
@@ -40,3 +40,7 @@ export const createUser = (values) => async (dispatch) => {
 export const signIn = (email, password) => async (dispatch) => {
   console.log(email)
 };
+
+export const signOut = () => dispatch => {
+  dispatch({ type: LOGOUT });
+}

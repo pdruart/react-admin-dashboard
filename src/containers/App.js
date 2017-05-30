@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Route, withRouter, Redirect } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import firebase from 'firebase';
-import { Dimmer, Loader } from 'semantic-ui-react';
+import { Loader } from 'semantic-ui-react';
 
 import { firebaseConfig } from '../config';
 
