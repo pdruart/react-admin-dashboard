@@ -2,8 +2,6 @@
 
 ![Screenshot](src/images/screenshot.jpg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-
 ## Available Scripts
 
 - In the project directory, you can run: `npm start` or `yarn start`.
@@ -12,6 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Dependencies
 
+- [Create React App](https://github.com/facebookincubator/create-react-app)
 - [React Redux](https://github.com/reactjs/redux)
 - [React Router](https://github.com/ReactTraining/react-router)
 - [Redux Form](http://redux-form.com/)

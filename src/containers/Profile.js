@@ -4,7 +4,11 @@ import Header from '../components/Header';
 class Profile extends React.Component {
   render()  {
     return (
-      <Header pageTitle='Profile' />
+      <div>
+       <Header pageTitle='Profile' />
+       <h2>This is profile</h2>
+      </div>
+     
     );
   }
 }

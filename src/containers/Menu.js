@@ -13,7 +13,8 @@ class Menu extends React.Component {
           <h2 className='title'>React Admin</h2>
         </div>
         <ul>
-          <MenuItem link='/dashboard' linkText='Dashboard' iconName='tachometer' />
+          <MenuItem link='/' linkText='Dashboard' iconName='tachometer' />
+          <MenuItem link='/profile' linkText='Profile' iconName='cog' />
           <MenuItem link='#' linkText='Shop' iconName='shopping-cart' />
           <MenuItem link='#' linkText='Products' iconName='tags' />
           <MenuItem link='#' linkText='Orders' iconName='list' />

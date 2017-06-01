@@ -18,7 +18,7 @@ const ProtectedRoute = ({ component: Component, authed, ...rest }) => {
       {...rest}
       render={props => authed === true 
       ? <Component {...props} />
-      : <Redirect to={{ pathname: '/', state: { from: props.location }}} />}
+      : <Redirect to={{ pathname: '/signIn', state: { from: props.location }}} />}
     />
   );
 }
@@ -56,10 +56,10 @@ class App extends React.Component {
     } else {
       return (
         <div>
-          <Route exact path='/' component={Home} />
+          <Route exact path='/welcome' component={Home} />
           <PublicRoute authed={this.state.loggedIn} path='/signIn' component={SignIn} />
           <PublicRoute authed={this.state.loggedIn} path='/signUp' component={SignUp} />
-          <ProtectedRoute authed={this.state.loggedIn} path='/dashboard' component={Dashboard} />     
+          <ProtectedRoute authed={this.state.loggedIn} path='/' component={Dashboard} />           
         </div>
       )
     }
