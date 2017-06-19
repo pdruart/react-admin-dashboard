@@ -4,8 +4,9 @@
 
 ## Available Scripts
 
-- In the project directory, you can run: `npm start` or `yarn start`.
-- Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- In the project directory, you can run: `npm install` or `yarn install`
+- Run `npm start` or `yarn start`
+- Open [http://localhost:3000](http://localhost:3000) to view it in the browser
 - To watch for changes in SCSS files, run `npm watch-css` or `yarn watch-css`
 
 ## Dependencies
